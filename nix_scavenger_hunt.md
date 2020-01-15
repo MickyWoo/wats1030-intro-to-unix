@@ -14,18 +14,50 @@ and then clone it to your development environment.
 
 ### Navigating the Filesystem
 
-* Get an idea of where you are in the operating system. Use the `pwd` command to find your "path to working directory"--your current location in the filesystem of your devbox. *Paste the output of the `pwd` command here:*
+* Get an idea of where you are in the operating system. Use the `pwd` command to find your "path to working directory"--your current location in the filesystem of your devbox. *Paste the output of the `pwd` command here:
+- /c/Users/browsy/Documents/Web Development/wats1030-intro-to-unix
+
 * Discover more about this filesystem. Use `ls` (the "list" command)to see what is in this directory. *What directories and files do you see when you run `ls`?*
+-Im am given all the files found within the current folder
+
 * You can use *options* to modify how a command runs. Try using `ls -alh` to see the contents of your current directory. *How are the results different when you use the `-alh` options?*
+-the main difference is that all the files found are now in detail in terms of view, showing their type via readable and directory, size, and date created.
+
 * The `man` ("manual") command tells you more about how any given command works. (*WARNING:* CodeAnywhere does not support the man command. You can click the following link to complete this task: http://man.he.net/). Run `man` to see instructions about how to use `man`. Then use `man` to learn what the `a`, `l`, and `h` options mean when used with the `ls` command. *Write down what those options do?*
+-a, --all
+    do not ignore entries starting with . 
+
+-l
+    use a long listing format 
+
+-h, --human-readable
+    with -l, print sizes in human readable format (e.g., 1K 234M 2G) 
+
 * Commands can also take *arguments*, which are usually the names of files or locations that you want the command to work with. Try running `ls /` to see what files are in the *root* directory of the filesystem. *What files and directories do you see listed?*
+- in my root: bin  cmd  dev  etc  git-bash.exe  git-cmd.exe  LICENSE.txt  mingw64  proc  ReleaseNotes.html  tmp  unins000.dat  unins000.exe  unins000.msg  usr
+
 * A Unix filesystem has a few special shortcuts to refer to specific locations. `/` indicates the *root* of the filesystem, meaning the top-most directory in the filesystem hierarchy. Use the `cd` ("change directory") command to move to the root directory. (Hint: Use `man` to look up the `cd` command if you have any issues) *Then run `pwd` and paste the output here:*
+when chaning to the root / all i get with pwd is "/"
+
 * Another special shortcut in Unix is the `~` location. This indicates the *user root* directory, meaning the top-most directory in the hierarchy that comes below your user account. Use `cd` to move to `~`. *Run `pwd` and paste the response here:*
+/c/Users/browsy
+
+
 * Change directory into the `challenge_files` directory. Use `ls` to find only the files with a `.demo` pattern. *How many files do you find?*
+(ls *demo )
+- 3
+
 * Use the `cd` command to move "up" one directory. *Where are you in the filesystem now?*
+ ~/Documents/Web Development/wats1030-intro-to-unix
+
 * Press the up arrow on your keyboard. *What just happened?*
+i got .. 
+
 * Press the up arrow a few more times. *What do you see?*
+i see my prevous entered commands 
+
 * Run the `history` command. *What do you see?*
+all my prevous entered commands 
 
 ### Observing the System
 
