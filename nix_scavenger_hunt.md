@@ -95,14 +95,29 @@ credit_cards.txt
 credit_cards2.txt
  -->
 
- <!-- https://www.youtube.com/watch?v=Ms5sNYyejEw -->
+ <!-- https://www.youtube.com/watch?v=KCVaNb_zOuw -->
 
 * Use the `more` command to view one of the `credit_cards` files you just discovered. (Hint: Type `q` to quit viewing the file. Press the `spacebar` to page down. Use your keyboard arrows to move up/down.) *What is the date in the file you have viewed?*
+$ less "credit_cards.txt"
+Last updated: 01-15-2015
+
+
 * Use the `find` command to search for files more effectively. Search the sub-directories under `challenge_files` to find the location of the file named `modi_laboriosam.txt`. *Where is that file located?*
 -./tmp/modi_laboriosam.txt
 
 * Use the `grep` command to search for text within a file. Use `grep` on all the `.user` files in `challenge_files` to find which files contain "WA" (the abbreviation for Washington state). *How many files did you find?*
+$ grep WA *
+grep: 01: Is a directory
+Britt-Erdman.user:O'Harachester, WA 37261
+Lissie-Strosin.user:Jewessfurt, WA 00816-7241
+
+<!-- https://www.youtube.com/watch?v=2-3i42XXzek
+grep -c WA * would have worked too -->
+
 * Use the `-r` option of `grep` to *recursively* find the text "Waldo" hidden in a file somewhere under the `challenge_files` directory. *Paste the result showing the file and line where the word "Waldo" shows up.*
+
+$ grep -r "Waldo"
+serial-numbers/eaque_molestiae.txt
 
 ### Pipes and Connecting Commands
 
