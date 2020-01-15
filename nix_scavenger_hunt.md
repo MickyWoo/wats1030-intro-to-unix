@@ -62,16 +62,45 @@ all my prevous entered commands
 ### Observing the System
 
 * Discover what account you are logged into using the `whoami` command. *What username are you currently using?*
-* Discover who else is on your system with the `who` command. *Are any other users using your system? If so, list them here:*
-* How long has your system been running? Use `uptime` to see, and *paste the result here:*
+browsy
+* Discover who else is on your system with the `who` command. *Are any other users using your system? If so, list them here:* 
+i dont get a response, so its just me as the user
+* How long has your system been running? Use `uptime` to see, and *paste the result here:* bash: uptime: command not found
 * Run `ps aux` and review the results. (Hint: Use `man` to learn more about the `ps` command and options.) *How do you interpret what you see here?*
+ps:first process shows the process under which this terminal is opened
+a:- This option prints the running processes from all users.
+
+u:- This option shows user or owner column in output.
+
+x:- This option prints the processes those have not been executed from the terminal.
+
+Collectively the options "aux" print all the running process in system regardless from where they have been executed.
+
+basically it seems like a set of main commands and where they are stashed.
+
 * Run `top` and review the results. (Hint: You may need to use `ctrl-c` to get out of this app.) *How do you interpret what you see here?*
+ displays processor activity of your Linux box and also displays tasks managed by kernel in real-time. It'll show processor and memory are being used
 
 ### Finding and Viewing Files
 
 * Make sure you are in the `challenge_files` directory. Use the `*` wildcard to find all the files that have the word "credit" in the filename. *How many files did you find?*
+-2
+$ find . -name "credit*"
+./credit_cards.txt
+./credit_cards2.txt
+
+<!-- alternative 
+find * | grep credit
+credit_cards.txt
+credit_cards2.txt
+ -->
+
+ <!-- https://www.youtube.com/watch?v=Ms5sNYyejEw -->
+
 * Use the `more` command to view one of the `credit_cards` files you just discovered. (Hint: Type `q` to quit viewing the file. Press the `spacebar` to page down. Use your keyboard arrows to move up/down.) *What is the date in the file you have viewed?*
 * Use the `find` command to search for files more effectively. Search the sub-directories under `challenge_files` to find the location of the file named `modi_laboriosam.txt`. *Where is that file located?*
+-./tmp/modi_laboriosam.txt
+
 * Use the `grep` command to search for text within a file. Use `grep` on all the `.user` files in `challenge_files` to find which files contain "WA" (the abbreviation for Washington state). *How many files did you find?*
 * Use the `-r` option of `grep` to *recursively* find the text "Waldo" hidden in a file somewhere under the `challenge_files` directory. *Paste the result showing the file and line where the word "Waldo" shows up.*
 
