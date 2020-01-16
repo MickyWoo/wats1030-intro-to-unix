@@ -1,0 +1,8 @@
+challenge_files
+files.txt
+LICENSE
+Linux Command Line Cheat Sheet by DaveChild - Download free from Cheatography - Cheatography.com Cheat Sheets For Every Occa.URL
+nix_scavenger_hunt.md
+nix_scavenger_hunt_stretch.md
+README.md
+super_scavengers.md

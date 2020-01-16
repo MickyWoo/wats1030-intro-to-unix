@@ -78,6 +78,8 @@ Collectively the options "aux" print all the running process in system regardles
 
 basically it seems like a set of main commands and where they are stashed.
 
+<!-- http://www.linfo.org/ps.html -->
+
 * Run `top` and review the results. (Hint: You may need to use `ctrl-c` to get out of this app.) *How do you interpret what you see here?*
  displays processor activity of your Linux box and also displays tasks managed by kernel in real-time. It'll show processor and memory are being used
 
@@ -116,11 +118,22 @@ grep -c WA * would have worked too -->
 
 * Use the `-r` option of `grep` to *recursively* find the text "Waldo" hidden in a file somewhere under the `challenge_files` directory. *Paste the result showing the file and line where the word "Waldo" shows up.*
 
-$ grep -r "Waldo"
+$ grep -r "Waldo" 
+ <!-- case sensitive Waldo -->
 serial-numbers/eaque_molestiae.txt
 
 ### Pipes and Connecting Commands
 
 * Sometimes it's useful to output the results of a command to a text file for further analysis, reference, or processing. Try running `ls > files.txt`. Notice that the file `files.txt` was created. View that file using `more`. *What do you see in the `files.txt` file?*
+I found all the users, it was sort of like a copy and paste.
+
 * Notice that if you run `ls -alh` in the `challenge_files` directory, the files scroll by very quickly. Sometimes it would be better to get the results in a paginated format. Try running `ls -alh | more`. *Describe what you see when you run `ls -alh | more`.*
+it stopped midway when listing all the names 
 * Earlier, when you viewed the list of active processes on your devbox using `ps aux`, the list was probably really long. You can make this list more manageable by using the pipe (`|`) to filter the results of `ps` using `grep`. Run `ps aux | grep <your_username>` to see what processes are running for your specific user. *Paste the list of processes that reference your username here:*
+
+$ ps -ef | grep browsy
+  browsy    2031       1 cons0    11:03:54 /usr/bin/bash
+  browsy    2108    2031 cons0    11:24:41 /usr/bin/ps
+
+
+<!-- http://www.linfo.org/ps.html -->
