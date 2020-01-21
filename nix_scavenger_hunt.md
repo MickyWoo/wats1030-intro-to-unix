@@ -105,6 +105,7 @@ Last updated: 01-15-2015
 
 
 * Use the `find` command to search for files more effectively. Search the sub-directories under `challenge_files` to find the location of the file named `modi_laboriosam.txt`. *Where is that file located?*
+find . -name "modi_laboriosam.txt"
 -./tmp/modi_laboriosam.txt
 
 * Use the `grep` command to search for text within a file. Use `grep` on all the `.user` files in `challenge_files` to find which files contain "WA" (the abbreviation for Washington state). *How many files did you find?*
@@ -128,7 +129,9 @@ serial-numbers/eaque_molestiae.txt
 I found all the users, it was sort of like a copy and paste.
 
 * Notice that if you run `ls -alh` in the `challenge_files` directory, the files scroll by very quickly. Sometimes it would be better to get the results in a paginated format. Try running `ls -alh | more`. *Describe what you see when you run `ls -alh | more`.*
-it stopped midway when listing all the names 
+it stopped midway when listing all the names
+
+
 * Earlier, when you viewed the list of active processes on your devbox using `ps aux`, the list was probably really long. You can make this list more manageable by using the pipe (`|`) to filter the results of `ps` using `grep`. Run `ps aux | grep <your_username>` to see what processes are running for your specific user. *Paste the list of processes that reference your username here:*
 
 $ ps -ef | grep browsy
